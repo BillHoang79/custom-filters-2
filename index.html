@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link charset="UTF-8">
+		<meta name="Bill Hoang" content="template">
+    	<link rel="stylesheet" type="text/css" href="css/main.css">
+    	<link rel="stylesheet" type= "text/css" href="css/animate.css">
+    	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    	<script src="https://code.angularjs.org/1.2.28/angularroute.min.js"></script>
+
+		<title>Angular</title>
+	</head>
+	<body ng-app="myApp"> 
+		<div ng-controller="myCtrl">
+			<h1>filter age</h1>
+			<input ng-model="mydata.str">
+			<!--filter users with candrve -->
+			<div ng-repeat="user in mydata.arr | candrive:mydata.str">
+			{{ user }}     
+			</div>
+		</div>
+
+		<script src="js/main.js"></script>
+		<script src="js/app.js"></script>
+		<script src="controllers/myctrl.js"></script>
+		<script src="controllers/costctrl.js"></script>
+		<script src="controllers/usersctrl.js"></script>
+	</body>
+</html>
+
